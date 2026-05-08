@@ -1,0 +1,53 @@
+node_modules/
+logs/
+*.ndjson
+.env
+.env.*
+.DS_Store
+
+# Node / npm / pnpm / yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.pnpm-store/
+.yarn/
+.pnp.*
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.turbo/
+.cache/
+coverage/
+
+# Runtime / temp
+tmp/
+temp/
+*.log
+*.tar
+*.tar.gz
+*.tgz
+
+# Extension packaging (common)
+*.crx
+*.xpi
+*.pem
+web-ext-artifacts/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Docker / Compose local overrides
+docker-compose.override.yml
+compose.override.yml
