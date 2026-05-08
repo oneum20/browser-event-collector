@@ -13,6 +13,29 @@ services:
     volumes:
       - collector-logs:/app/logs
     restart: unless-stopped
+  fluent-bit:
+    image: fluent/fluent-bit:2.2
+    depends_on:
+      - collector
+    ports:
+      - "2020:2020"
+    volumes:
+      - collector-logs:/logs:ro
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro
+      - ./fluent-bit/parsers.conf:/fluent-bit/etc/parsers.conf:ro
+      - fluent-bit-state:/fluent-bit/state
+    restart: unless-stopped
+    environment:
+      - OPENSEARCH_HOST=${OPENSEARCH_HOST}
+      - OPENSEARCH_PORT=${OPENSEARCH_PORT}
+      - OPENSEARCH_USER=${OPENSEARCH_USER}
+      - OPENSEARCH_PASS=${OPENSEARCH_PASS}
+      - OS_INDEX_PREFIX=${OS_INDEX_PREFIX}
+      - NODE_NAME=${HOSTNAME}
+    labels:
+      log_collect: "true"
+      service: "fluent-bit"
 
 volumes:
   collector-logs:
+  fluent-bit-state:
