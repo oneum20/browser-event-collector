@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "collectorUrl": {
+      "type": "string",
+      "title": "Collector API URL"
+    },
+    "candidateId": {
+      "type": "string",
+      "title": "Candidate or session ID"
+    },
+    "collectorToken": {
+      "type": "string",
+      "title": "Collector shared token"
+    }
+  }
+}

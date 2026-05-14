@@ -32,6 +32,7 @@ temp/
 *.tar
 *.tar.gz
 *.tgz
+*.zip
 
 # Extension packaging (common)
 *.crx
