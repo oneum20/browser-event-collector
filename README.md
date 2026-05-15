@@ -1,6 +1,6 @@
 # browser-event-monit
 
-Chromium 기반 브라우저(Chrome, Edge 등)에서 **탭·탐색·창 포커스** 같은 이벤트를 수집해, 로컬 또는 사내 **collector HTTP API**로 보내는 구성입니다. 수집기는 NDJSON으로 적재하고, Fluent Bit 등으로 OpenSearch 등으로 넘기는 용도를 가정합니다.
+Chromium 기반 브라우저(Chrome, Edge 등)에서 **탭·탐색·창 포커스** 같은 이벤트를 수집해, **collector HTTP API 서버**로 보내는 구성입니다. 수집기는 NDJSON으로 적재하고, Fluent Bit 등으로 OpenSearch 등으로 넘기는 용도를 가정합니다.
 
 ## 전체 아키텍처
 
